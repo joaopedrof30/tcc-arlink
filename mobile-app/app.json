@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Sistema AR IoT",
+    "slug": "sistema-ar-iot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#1e40af"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Este app precisa da câmera para escanear QR Codes dos ar-condicionados.",
+        "NSMicrophoneUsageDescription": "Necessário para uso da câmera."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1e40af"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir acesso à câmera para escanear QR Codes."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "sistema-ar-iot"
+  }
+}
